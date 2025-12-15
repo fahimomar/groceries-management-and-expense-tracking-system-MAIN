@@ -33,22 +33,31 @@ A simple full-stack web application designed to help users manage grocery invent
    git clone https://github.com/fahimomar/groceries-management-and-expense-tracking-system-MAIN.git
    cd groceries-management-and-expense-tracking-system-MAIN
 
-   ## 📸 Screenshots
+## 📸 Screenshots
 
-### 🖥️ Dashboard (Light Mode)
+### 🧾 Dashboard
 ![Dashboard](./images/dashboard.png)
 
-### 🌙 Dashboard (Dark Mode)
-![Dashboard Dark](./images/dashboard_dark.png)
+### 🛒 Add Items
+![Add Items](./images/add%20items.png)
 
-### 📦 Inventory Management
+### 📦 Inventory Overview
 ![Inventory](./images/inventory.png)
 
-### 🛒 Product List
-![Products](./images/products.png)
+### 🔍 Search in Inventory
+![Search in Inventory](./images/search%20in%20inventtory.png)
 
 ### 💰 Expense Tracker
 ![Expenses](./images/expenses.png)
+
+### 🤖 AI Prediction
+![AI Prediction](./images/Ai%20prediction.png)
+
+### 📷 QR Code Add Product
+![QR Add](./images/qr%20add.png)
+
+### ⚙️ Settings Page
+![Settings](./images/settings.png)
 
 ### ⚙️ Settings Page
 ![Settings](./images/settings.png)
