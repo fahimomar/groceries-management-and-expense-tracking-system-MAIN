@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================
+// Users
+// ============================
+model Users {
+  userId String @id @default(uuid())
+  name   String
+  email  String
+}
+
+// ============================
+// Products
+// ============================
+model Products {
+  productId       String   @id @default(uuid())
+  name            String
+  price           Float
+  rating          Float?
+  stockQuantity   Int
+  expiryDate      DateTime?
+  category        String?
+  storageLocation String?   // ADD THIS FIELD
+
+  Sales           Sales[]
+  Purchases       Purchases[]
+}
+
+// ============================
+// Sales (CASCADE ENABLED)
+// ============================
+model Sales {
+  saleId      String   @id @default(uuid())
+  productId   String
+  timestamp   DateTime @default(now())
+  quantity    Int
+  unitPrice   Float
+  totalAmount Float
+
+  product     Products @relation(fields: [productId], references: [productId], onDelete: Cascade)
+}
+
+// ============================
+// Purchases (CASCADE ENABLED)
+// ============================
+model Purchases {
+  purchaseId String   @id @default(uuid())
+  productId  String
+  timestamp  DateTime @default(now())
+  quantity   Int
+  unitCost   Float
+  totalCost  Float
+
+  product    Products @relation(fields: [productId], references: [productId], onDelete: Cascade)
+}
+
+// ============================
+// User with Password
+// ============================
+model User {
+  userId   String @id @default(uuid())
+  name     String
+  email    String @unique
+  password String
+}
