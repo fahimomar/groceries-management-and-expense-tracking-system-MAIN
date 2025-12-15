@@ -30,6 +30,5 @@ A simple full-stack web application designed to help users manage grocery invent
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/grocery-management.git
-   cd grocery-management
-
+   git clone https://github.com/fahimomar/groceries-management-and-expense-tracking-system-MAIN.git
+   cd groceries-management-and-expense-tracking-system-MAIN
